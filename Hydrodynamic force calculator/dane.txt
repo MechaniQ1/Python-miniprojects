@@ -1,0 +1,20 @@
+Wysokosć fali [m]:
+H = 1
+Głębokosć wody [m]:
+h = 15
+Okres fali [s]:
+T = 10
+Srednica rurociągu [m]:
+D = 0.5
+Zagłębienie rurociągu [m]:
+b = 1
+Miąższosc warstwy przepuszczalnej [m]:
+d = 10
+Stopień nasycenia gruntu wodą [-]:
+S = 0.9
+Porowatosć gruntu [-]:
+n = 0.4
+Współczynnik przepuszczalnosci gruntu kx [m/s]:
+kx = 0.01
+Współczynnik przepuszczalnosci gruntu kz [m/s]:
+kz = 0.01
