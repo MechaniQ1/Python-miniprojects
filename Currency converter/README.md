@@ -7,8 +7,8 @@ It also uses NBP's archives to draw a plot with last 20 rates of selected curren
 
 ## How it works
 First, application downloads exchange rates of 35 currencies according to NBP. Then user have to choose currency by typing number of selected currency.
-Next user have to decide what he wants to do. First option is currency conversion. In this case he can convert PLN to currency of his choice or vice versa.
-Second option displays last 20 prcies of selected currency.  
+Next user have to decide what he wants to do. First option is currency conversion. In this case app converts PLN to currency of user's choice or vice versa.
+Second option displays last 20 prices of selected currency.  
 
 ## Screenshots
 ![Example screenshot](./img/screenshot1.png)
