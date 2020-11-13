@@ -12,11 +12,11 @@ Second option displays last 20 prices of selected currency.
 
 ## Screenshots
 ![Example screenshot](./img/screenshot1.png)
-![Example screenshot](./img/screenshot2.png)
+![Example screenshot](./img/screenshot2.PNG)
 ![Example screenshot](./img/screenshot3.png)
 
 ## Technologies
-* Python 3.7
+* Python 3.7<br/ >
 Libraries:
 * BeautifulSoup
 * Requests
