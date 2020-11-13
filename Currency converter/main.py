@@ -12,7 +12,7 @@ URL = 'https://www.nbp.pl/home.aspx?f=/kursy/kursya.html'
 
 page = BeautifulSoup(get(URL).content, 'html.parser')
 date = page.find('p', class_='nag').get_text().split(' ')[-1]
-print(f'Średnie kursy walut z dnia {date} wg Narodowego Banku Polskiego\n')
+print(f'\nŚrednie kursy walut z dnia {date} wg Narodowego Banku Polskiego\n')
 
 currencies = []
 table = page.find('table', class_='pad5')
@@ -50,10 +50,10 @@ if action_choice == 1:
     else:
         code1 = code
         code2 = 'PLN'
-    print(f'Wybrano {code1} -> {code2}')
+    print(f'\nWybrano {code1} -> {code2}')
     amount = float(input(f'Podaj ilosć {code1}: ').replace(',','.'))
     amount = floor(amount*100)/100
-    print(f'{amount:.2f} {code1} = {floor(amount*rate*100)/100:.2f} {code2}')
+    print(f'\n{amount:.2f} {code1} = {floor(amount*rate*100)/100:.2f} {code2}')
 else:
     print('\nWybrano wykres ostatnich notowań')
     year = datetime.now().year
@@ -72,11 +72,13 @@ else:
             temp_date += str(tuple_date[2])
         dates.append(temp_date)
         rates.append(sheet.cell_value(i,curr_choice))
-    plt.plot(dates, rates, color='black', marker='o', linestyle='solid')
+    plt.plot(dates, rates, color='k', marker='s', linestyle='solid', markersize=3)
     plt.xticks(rotation='45')
     plt.xlabel('Data')
     plt.ylabel('Cena waluty [PLN]')
-    plt.title(f'''{sheet.cell_value(sheet.nrows-1, curr_choice):.0f}{code} -> PLN
-              (ostatnie 20 notowań)''')
+    plt.title(f'{sheet.cell_value(sheet.nrows-1, curr_choice):.0f}{code} -> PLN\n(ostatnie 20 notowań)')
+    plt.grid(axis='y', color='gray', linestyle = '--')
+    plt.tight_layout()
+    plt.savefig('wykres.png')
     plt.show()
     remove('archive.xls')
